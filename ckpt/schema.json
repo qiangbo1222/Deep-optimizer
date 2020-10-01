@@ -1,0 +1,128 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "Model configuration",
+    "description": "Schema for model configuration files",
+    "type": "object",
+    "properties": {
+        "ckpt_loc": {
+            "type": "string",
+            "description": "Location to store model checkpoints"
+        },
+        "molecule_loc": {
+            "type": "string",
+            "description": "Location of molecule SMILES strings"
+        },
+        "network_loc": {
+            "type": "string",
+            "description": "Location of the bipartite network"
+        },
+        "exclude_ids_loc": {
+            "type": "string",
+            "description": "The location storing the ids to be excluded from the training set"
+        },
+        "full": {
+            "type": "boolean",
+            "description": "Whether to use the full dataset for training, default to False"
+        },
+        "split_by": {
+            "type": "string",
+            "description": "Whether to split by scaffold or molecule"
+        },
+        "training_only": {
+            "type": "boolean",
+            "description": "Recording only training loss, default to False"
+        },
+        "num_workers": {
+            "type": "integer",
+            "description": "Number of workers used during data loading, default to 1"
+        },
+        "num_atom_embedding": {
+            "type": "integer",
+            "description": "The size of the initial node embedding"
+        },
+        "causal_hidden_sizes": {
+            "type": "array",
+            "description": "The size of hidden layers in causal weave blocks",
+            "minItems": 1,
+            "items":{
+                "type": "number"
+            }
+        },
+        "num_bn_features": {
+            "type": "integer",
+            "description": "The number of features used in bottleneck layers in each dense layer"
+        },
+        "num_k_features": {
+            "type": "integer",
+            "description": "The growth rate of dense net"
+        },
+        "num_layers": {
+            "type": "integer",
+            "description": "The number of densenet layers"
+        },
+        "num_output_features": {
+            "type": "integer",
+            "description": "The number of output features for the densenet"
+        },
+        "efficient": {
+            "type": "boolean",
+            "description": "Whether to use the memory efficient implementation of densenet"
+        },
+        "activation": {
+            "type": "string",
+            "description": "The activation function used, default to 'elu'"
+        },
+        "lr": {
+            "type": "number",
+            "description": "(Initial) learning rate"
+        },
+        "decay": {
+            "type": "number",
+            "description": "The rate of learning rate decay"
+        },
+        "decay_step": {
+            "type": "integer",
+            "description": "The interval of each learning rate decay"
+        },
+        "min_lr": {
+            "type": "number",
+            "description": "The minimum learning rate"
+        },
+        "summary_step": {
+            "type": "integer",
+            "description": "Interval of summary"
+        },
+        "clip_grad": {
+            "type": "number",
+            "description": "Gradient clipping"
+        },
+        "batch_size": {
+            "type": "integer",
+            "description": "The batch size for training"
+        },
+        "batch_size_test": {
+            "type": "integer",
+            "description": "The batch size for testing"
+        },
+        "num_iterations": {
+            "type": "integer",
+            "description": "The number of total iterations for model training"
+        },
+        "k": {
+            "type": "integer",
+            "description": "The number of importance samples"
+        },
+        "p": {
+            "type": "number",
+            "description": "The degree of stochasticity of importance sampling 0.0 for fully stochastic decoding, 1.0 for fully deterministic decoding"
+        },
+        "gpu_ids": {
+            "type": "array",
+            "description": "Which GPUs are used for training",
+            "minItems": 1,
+            "items":{
+                "type": "number"
+            }
+        }
+    }
+}

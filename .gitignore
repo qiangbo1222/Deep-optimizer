@@ -1,0 +1,6 @@
+.devcontainer
+.vscode
+.env
+playground.*
+.ipynb_checkpoints
+__pycache__

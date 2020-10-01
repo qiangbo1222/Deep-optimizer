@@ -1,0 +1,5 @@
+{
+    "ckpt_loc": "ckpt/ckpt-spiropiperidine_5",
+    "exclude_ids_loc": "ckpt/ckpt-spiropiperidine_5/exclude_ids.txt",
+    "training_only": true
+}

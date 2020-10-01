@@ -1,0 +1,5 @@
+*exclude_ids.txt filter=lfs diff=lfs merge=lfs -text
+*.ckpt filter=lfs diff=lfs merge=lfs -text
+*log.out filter=lfs diff=lfs merge=lfs -text
+*eval_results.txt filter=lfs diff=lfs merge=lfs -text
+*.smi filter=lfs diff=lfs merge=lfs -text

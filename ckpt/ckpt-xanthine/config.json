@@ -1,0 +1,8 @@
+{
+    "ckpt_loc": "ckpt/ckpt-xanthine",
+    "exclude_ids_loc": "ckpt/ckpt-xanthine/exclude_ids.txt",
+    "training_only": true,
+    "batch_size": 126,
+    "batch_size_test": 252,
+    "gpu_ids": [0, 1, 2]
+}

@@ -1,0 +1,12 @@
+[submodule "deep-scaffold"]
+	path = deep_scaffold
+	url = ssh://git@ddl.bjmu.edu.cn:15806/deep-scaffold/deep-scaffold.git
+[submodule "mol_spec"]
+	path = mol_spec
+	url = ssh://git@ddl.bjmu.edu.cn:15806/ybli/mol_spec.git
+[submodule "ckpt"]
+	path = ckpt
+	url = ssh://git@ddl.bjmu.edu.cn:15806/deep-scaffold/checkpoints.git
+[submodule "data_utils"]
+	path = data_utils
+	url = ssh://git@ddl.bjmu.edu.cn:15806/deep-scaffold/data.git
